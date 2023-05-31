@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section id="infos">
+            <h1 id="text">Let's discuss <br> on something <span id="text-decoration">cool</span> together</h1>
+
+            <ul id="contact">
+                <address>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        SaulDesign@gmail.com
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        + 123 456 789
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                         123 Street 456 House
+                    </li>
+                </address>
+            </ul>
+
+            <ul id="social-media">
+                <li><i class="fa-brands fa-facebook-f"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+            </ul>
+        </section>
+
+        <section>
+            <div id="form">
+                <form id="contact-form" method="post" autocomplete="on">
+                    <fieldset>
+                        <legend>I'm interested in...</legend>
+                        <input type="radio" name="interests" id="iux-ui" class="custom-radio" onchange="validateRadio()">
+                        <label class="options" for="iux-ui">UI/UX design</label>
+
+                        <input type="radio" name="interests" id="iweb-design" class="custom-radio" onchange="validateRadio()">
+                        <label class="options" for="iweb-design">Web design</label>
+                        
+                        <input type="radio" name="interests" id="igrap-design" class="custom-radio" onchange="validateRadio()">
+                        <label class="options" for="igrap-design">Graphic design</label>
+
+                        <input type="radio" name="interests" id="idesign-sst" class="custom-radio" onchange="validateRadio()"> 
+                        <label class="options" for="idesign-sst">Design system</label>
+                        
+                        <input type="radio" name="interests" id="iother" class="custom-radio" onchange="validateRadio()"> 
+                        <label class="options" for="iother">Other</label>
+                    </fieldset>
+
+                    <div class="field">
+                        <input type="text" name="name" id="iname" placeholder="Your name" class="f-required" oninput="validateName()">
+                        <i class="errorPoint fas fa-exclamation-circle"></i>
+                        <i class="successPoint fas fa-check-circle"></i>
+                        <span class="s-required">The name must have, at least, 2 words.</span>
+                    </div>
+                    
+                    <div class="field">
+                        <input type="email" name="email" id="iemail" placeholder="Your email" class="f-required" oninput="validateEmail()">
+                        <i class="errorPoint fas fa-exclamation-circle"></i>
+                        <i class="successPoint fas fa-check-circle"></i>
+                        <span class="s-required">Enter a valid email address.</span>
+                    </div>
+                    
+                    <div class="field">
+                        <textarea name="msg" id="imsg" placeholder="Your message" class="f-required" oninput="validateMessage()"></textarea>
+                        <i class="errorPoint fas fa-exclamation-circle"></i>
+                        <i class="successPoint fas fa-check-circle"></i>
+                        <span class="s-required">The message must have, at least, 20 letters.</span>
+                    </div>
+                    
+                    <div class="btn">
+                        <button type="submit" id="submit-btn" disabled>
+                            <i class="fa-sharp fa-solid fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </div>   
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://kit.fontawesome.com/5c606ab314.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
